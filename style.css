@@ -1,0 +1,499 @@
+/* ==================================================
+   PORTFOLIO TEMPLATE STYLESHEET
+
+   LEARNER CHALLENGES:
+   1. Change the main colors.
+   2. Replace all placeholder text.
+   3. Add your own profile image.
+   4. Add a fourth project card.
+   5. Change the fonts and spacing.
+   6. Add a resume download button.
+   ================================================== */
+
+
+/* ------------------------------
+   CSS VARIABLES
+   Change these values to quickly
+   update the website's colors.
+   ------------------------------ */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #0f172a;
+    --accent-color: #e0e7ff;
+    --background-color: #ffffff;
+    --alternate-background: #f8fafc;
+    --text-color: #334155;
+    --light-text: #64748b;
+    --border-color: #cbd5e1;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
+}
+
+
+/* ------------------------------
+   GLOBAL RESET
+   ------------------------------ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ------------------------------
+   NAVIGATION
+   ------------------------------ */
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1100px;
+    min-height: 70px;
+    padding: 0 24px;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* ------------------------------
+   HERO SECTION
+   ------------------------------ */
+.hero {
+    align-items: center;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1.4fr 1fr;
+    margin: 0 auto;
+    max-width: 1100px;
+    min-height: 85vh;
+    padding: 80px 24px;
+}
+
+.intro-text {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    color: var(--secondary-color);
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    line-height: 1.1;
+}
+
+.hero h2 {
+    color: var(--light-text);
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    margin: 12px 0 20px;
+}
+
+.hero p {
+    max-width: 650px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.button {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 22px;
+    transition: 0.2s ease;
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.primary-button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.secondary-button:hover {
+    background-color: var(--accent-color);
+}
+
+.profile-card {
+    background-color: var(--accent-color);
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.profile-card img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+
+/* ------------------------------
+   GENERAL SECTION STYLES
+   ------------------------------ */
+.section {
+    padding: 90px 24px;
+}
+
+.alternate-section {
+    background-color: var(--alternate-background);
+}
+
+.section > * {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.section-heading p {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    color: var(--secondary-color);
+    font-size: 2.3rem;
+}
+
+
+/* ------------------------------
+   ABOUT SECTION
+   ------------------------------ */
+.about-content {
+    display: grid;
+    gap: 45px;
+    grid-template-columns: 1.4fr 1fr;
+}
+
+.about-content h3 {
+    color: var(--secondary-color);
+    margin-bottom: 14px;
+}
+
+.about-content p {
+    margin-bottom: 14px;
+}
+
+.about-details {
+    background-color: var(--white);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 28px;
+}
+
+
+/* ------------------------------
+   SKILLS SECTION
+   ------------------------------ */
+.skills-grid {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.skill-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    transition: 0.2s ease;
+}
+
+.skill-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+
+/* ------------------------------
+   PROJECTS SECTION
+   ------------------------------ */
+.projects-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.project-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.project-image {
+    align-items: center;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: bold;
+    height: 180px;
+    justify-content: center;
+}
+
+.project-content {
+    padding: 24px;
+}
+
+.project-content h3 {
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+}
+
+.project-tools {
+    color: var(--light-text);
+    font-size: 0.9rem;
+    margin: 16px 0;
+}
+
+.project-link {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+
+/* ------------------------------
+   EDUCATION TIMELINE
+   ------------------------------ */
+.timeline {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 30px;
+}
+
+.timeline-item {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 25px;
+    position: relative;
+}
+
+.timeline-item::before {
+    background-color: var(--primary-color);
+    border: 4px solid var(--alternate-background);
+    border-radius: 50%;
+    content: "";
+    height: 18px;
+    left: -43px;
+    position: absolute;
+    top: 28px;
+    width: 18px;
+}
+
+.timeline-date {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin: 5px 0 10px;
+}
+
+
+/* ------------------------------
+   CONTACT SECTION
+   ------------------------------ */
+.contact-section {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.contact-section .section-heading h2,
+.contact-section .section-heading p {
+    color: var(--white);
+}
+
+.contact-container {
+    display: grid;
+    gap: 45px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-text h3 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+.contact-text p {
+    margin-bottom: 14px;
+}
+
+.contact-form {
+    background-color: var(--white);
+    border-radius: 12px;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin: 12px 0 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    font: inherit;
+    padding: 12px;
+}
+
+.contact-form button {
+    margin-top: 20px;
+}
+
+
+/* ------------------------------
+   FOOTER
+   ------------------------------ */
+footer {
+    background-color: #020617;
+    color: var(--white);
+    padding: 24px;
+    text-align: center;
+}
+
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+   These styles apply to tablets
+   and smaller screens.
+   ------------------------------ */
+@media (max-width: 850px) {
+    .hero,
+    .about-content,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        min-height: auto;
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .profile-card {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+}
+
+
+/* ------------------------------
+   MOBILE DESIGN
+   ------------------------------ */
+@media (max-width: 600px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 16px;
+        padding-top: 16px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 70px 18px;
+    }
+
+    .hero {
+        padding: 60px 18px;
+    }
+}
